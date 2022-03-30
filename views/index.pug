@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+   h1 Welcome to Mecakey inventory app
+
+   if error
+     p Error getting dynamic content.
+   else
+     h2 The inventory app has the following record counts:
+ 
+     ul(class="countList")
+       li #[strong Mechanical keyboards:] !{data.mecakeyboard_count}
+       li #[strong Membrane keyboards:] !{data.memkeyboard_count}
+       li #[strong Switches:] !{data.switchKey_count}

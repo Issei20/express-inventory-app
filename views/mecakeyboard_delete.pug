@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+    h1 #{title}:
+
+    p Do you really want to delete #{mecakeyboard.name}?
+      |
+      h4 #{mecakeyboard.title}
+
+    form(method='POST' action='')
+      div
+        input(type='hidden',name='mecakeyboardid', required='true', value=mecakeyboard._id, )
+        label(for="inputPass") Password :
+        input(type="password", name="inputPass", required='true', class="inputDel") 
+        button(type='submit' class="delBtn") Delete
+    
+  
+    if errors
+     ul
+      for error in errors
+       li!= error.msg

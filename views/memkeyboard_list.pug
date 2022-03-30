@@ -1,0 +1,21 @@
+extends layout 
+
+block content
+
+    div(class="listContainer")
+
+     ul(class="listAll") 
+        h1(class="titleListAll") #{title}
+        each memkeyboard in memkeyboard_list  
+             a(href=memkeyboard.url)
+                li(class="listElem") #{memkeyboard.name}
+                   div(class="indicElem")
+                    p(class="indic") PRICE : #{memkeyboard.price}$ 
+                    p(class="indic") STOCK : #{memkeyboard.number_in_stock}
+                    
+
+        else 
+            li There are no membrane keyboards
+
+    a(href="/inventory/memkeyboard/create") 
+        button(class="buttonSpec") ADD

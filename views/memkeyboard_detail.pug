@@ -1,0 +1,27 @@
+extends layout 
+
+block content 
+
+    div(class="containerDetail")
+     h1 #{title}
+
+     div(class="detailDiv") 
+       p #[Strong Name :] #{memkeyboard.name}
+         if (memkeyboard.description == "") 
+            p #[Strong Description :] Membrane keyboard 
+         else  
+            p #[Strong Description :] #{memkeyboard.description}
+       p #[Strong Price :] #{memkeyboard.price} $
+       p #[Strong Number in stock :] #{memkeyboard.number_in_stock}
+       p #[Strong Brand :] #{memkeyboard.brand}
+       p #[Strong Layout :] #{memkeyboard.layout}
+   
+   
+       div(class="containerUpDel")
+        a(href=memkeyboard.url+'/delete')
+          button(class="upDel") DELETE
+        a(href=memkeyboard.url+'/update') 
+          button(class="upDel") UPDATE
+
+    if (memkeyboard.images !== '')
+       img(src="../uploads/"+memkeyboard.images, class="image-meca", alt="image")

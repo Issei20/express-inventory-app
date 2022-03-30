@@ -1,0 +1,24 @@
+extends layout 
+
+block content 
+
+  h1(class="titleForm")  #{title}
+
+  form(method='POST' action='' class="form-create" enctype="multipart/form-data")
+      label(for='name') Name :
+      input(type='text', placeholder='' name='name' value=(undefined===switchKey ? '' : switchKey.name))
+      label(for='description') Description :
+      input(type='text', placeholder='' name='description' value=(undefined===switchKey ? '' : switchKey.description))
+      label(for='price') Price :
+      input(type='number', placeholder='0' name='price' value=(undefined===switchKey ? '' : switchKey.price))
+      label(for='number-in-stock') Number in stock :
+      input(type='number', placeholder='0' name='number_in_stock' value=(undefined===switchKey ? '' : switchKey.number_in_stock))
+      label(for='type') Type :
+      input(type='text', placeholder='' name='type' value=(undefined===switchKey ? '' : switchKey.type))
+      input(type="file" class="form-control-file" name="image", class="fileInput")
+      button(type='submit', class="submitBtn") Submit
+
+  if errors
+   ul
+    for error in errors
+     li!= error.msg

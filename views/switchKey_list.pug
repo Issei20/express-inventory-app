@@ -1,0 +1,21 @@
+extends layout 
+
+block content
+
+    div(class="listContainer") 
+
+     ul(class="listAll")  
+        h1(class="titleListAll") #{title}
+        each switchKey in switchKey_list
+               a(href=switchKey.url) 
+                  li(class="listElem") #{switchKey.name}
+                      div(class="indicElem")
+                         p(class="indic") PRICE : #{switchKey.price}$ 
+                         p(class="indic") STOCK : #{switchKey.number_in_stock}
+                    
+
+        else 
+              li There are no switches
+
+    a(href="/inventory/switchKey/create") 
+        button(class="buttonSpec") ADD

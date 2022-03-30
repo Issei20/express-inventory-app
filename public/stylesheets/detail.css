@@ -1,0 +1,31 @@
+.detailDiv {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+}
+
+.containerDetail {
+   margin-left: 5vw;
+   padding: 1vw;
+}
+
+.upDel {
+    background: grey;
+    color: white;
+    height: 4vh;
+    width: 7vw;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 100ms ease-in-out;
+}
+
+.upDel:hover {
+    background: rgb(82, 82, 82);
+}
+
+.containerUpDel {
+    margin-top: 5vh;
+}

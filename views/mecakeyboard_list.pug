@@ -1,0 +1,23 @@
+extends layout 
+
+block content
+
+    div(class="listContainer") 
+
+     ul(class="listAll")
+        div(class="containerTitleList")   
+                h1(class="titleListAll") #{title}
+        each mecakeyboard in mecakeyboard_list
+            a(href=mecakeyboard.url) 
+              li(class="listElem") #{mecakeyboard.name}
+                div(class="indicElem")
+                    p(class="indic") PRICE : #{mecakeyboard.price}$ 
+                    p(class="indic") STOCK : #{mecakeyboard.number_in_stock}
+                   
+                  
+
+        else 
+              li There are no mechanical keyboards
+
+    a(href="/inventory/mecakeyboard/create") 
+        button(class="buttonSpec") ADD

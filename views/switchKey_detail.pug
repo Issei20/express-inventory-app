@@ -1,0 +1,25 @@
+extends layout 
+
+block content 
+
+   div(class="containerDetail")
+    h1 #{title}
+
+    div(class="detailDiv") 
+       p #[Strong Name :] #{switchKey.name}
+       if (switchKey.description == "") 
+        p #[Strong Description :] #{type} switch
+       else  
+        p #[Strong Description :] #{switchKey.description}
+       p #[Strong Price :] #{switchKey.price} $
+       p #[Strong Number in stock :] #{switchKey.number_in_stock}
+       p #[Strong Type :] #{switchKey.type}
+
+       div(class="containerUpDel")
+        a(href=switchKey.url+'/delete')
+          button(class="upDel") DELETE
+        a(href=switchKey.url+'/update') 
+          button(class="upDel") UPDATE
+
+    if (switchKey.images !== '')
+       img(src="../uploads/"+switchKey.images, class="image-switch", alt="image")

@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1(class="titleForm")  #{title}
+
+  form(method='POST' action='' class="form-create" enctype="multipart/form-data")
+      label(for='name') Name :
+      input(type='text', placeholder='' name='name' value=(undefined===memkeyboard ? '' : memkeyboard.name))
+      label(for='description') Description :
+      input(type='text', placeholder='' name='description' value=(undefined===memkeyboard ? '' : memkeyboard.description))
+      label(for='price') Price :
+      input(type='number', placeholder='0' name='price' value=(undefined===memkeyboard ? '' : memkeyboard.price))
+      label(for='number_in_stock') Number in stock :
+      input(type='number', placeholder='0' name='number_in_stock' value=(undefined===memkeyboard ? '' : memkeyboard.number_in_stock))
+      label(for='brand') Brand :
+      input(type='text', placeholder='' name='brand' value=(undefined===memkeyboard ? '' : memkeyboard.brand))
+      label(for='layout') Layout:
+      select(type='select' placeholder='Select layout' name='layout' required='true')
+        if (undefined===memkeyboard) 
+           option(value='AZERTY' ) AZERTY
+           option(value='QWERTY') QWERTY
+        else
+           option(value='AZERTY',selected= (memkeyboard.layout == 'AZERTY') ) AZERTY
+           option(value='QWERTY', selected= (memkeyboard.layout == 'QWERTY') ) QWERTY
+      input(type="file" class="form-control-file" name="image" class="fileInput")
+      button(type='submit', class="submitBtn") Submit
+
+  if errors
+   ul
+    for error in errors
+     li!= error.msg

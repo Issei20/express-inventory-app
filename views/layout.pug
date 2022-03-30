@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+  
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/detail.css')
+    link(rel='stylesheet', href='/stylesheets/form.css')
+  body
+     div(class="container-layout")
+        header(class="header-app")
+          a(href="/inventory/") 
+            h1(class="title-app") MECAKEY INVENTORY
+        div(class="container-sidebar")
+           h1(class="title-categories") CATEGORIES
+           ul(class="list-categories") 
+              a(href="/inventory/mecakeyboards") 
+                li Mechanical keyboards 
+              a(href="/inventory/memkeyboards")
+                li Membrane keyboards 
+              a(href="/inventory/switchKeys") 
+                li Switches  
+        div(class="container-content")       
+          block content

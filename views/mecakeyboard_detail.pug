@@ -1,0 +1,25 @@
+extends layout 
+
+block content 
+   div(class="containerDetail")
+    h1 #{title}
+
+    div(class="detailDiv") 
+       p #[Strong Name :] #{mecakeyboard.name}
+       if (mecakeyboard.description == "") 
+        p #[Strong Description :] Mechanical keyboard 
+       else  
+        p #[Strong Description :] #{mecakeyboard.description}
+       p #[Strong Price :] #{mecakeyboard.price} $
+       p #[Strong Number in stock :] #{mecakeyboard.number_in_stock}
+       p #[Strong Brand :] #{mecakeyboard.brand}
+       p #[Strong Layout :] #{mecakeyboard.layout}
+  
+       div(class="containerUpDel")
+        a(href=mecakeyboard.url+'/delete')
+          button(class="upDel") DELETE
+        a(href=mecakeyboard.url+'/update') 
+          button(class="upDel") UPDATE
+
+    if (mecakeyboard.images !== '')
+       img(src="../uploads/"+mecakeyboard.images, class="image-meca", alt="image")

@@ -1,0 +1,72 @@
+.form-create {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: 1vh;
+    margin-left: 20vw;
+}
+
+.titleForm {
+    margin-left: 18vw;
+}
+.inputDel {
+    padding: 5px;
+    width: 5vw;
+    height: 1.5vh;
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+select {
+    height: 3vh;
+    font-size: 1rem;
+}
+
+.delBtn {
+    margin-left: 10px;
+    border: none;
+    background-color: rgb(173, 65, 65);
+    color: white;
+    width: 3vw;
+    height: 3.5vh;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delBtn:hover {
+    background-color: rgb(146, 36, 36);
+}
+
+.form-create > input {
+    height: 3vh;
+    font-size: 1.2rem;
+    background: rgb(236, 236, 236);
+    border: none;
+
+}
+
+.form-create > label {
+    font-size: 1.5rem;
+}
+
+.fileInput {
+    padding: 10px;
+}
+
+.submitBtn {
+    height: 5vh;
+    background-color: rgb(57, 168, 131);
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-top: 3vh;
+    width: 10vw;
+    border-radius: 1rem;
+    align-self: center;
+}
+
+.submitBtn:hover {
+    background-color: rgb(65, 201, 155);
+}

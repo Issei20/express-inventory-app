@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 #{title}:
+
+    p Do you really want to delete #{switchKey.name}?
+      |
+      h4 #{switchKey.title}
+
+    form(method='POST' action='')
+      div
+        input(type='hidden',name='switchKeyid', required='true', value=switchKey._id )
+        label(for="inputPass") Password :
+        input(type="text", name="inputPass", required='true', class="inputDel") 
+        button(type='submit', class="delBtn") Delete
+    
+  
+  if errors
+   ul
+    for error in errors
+     li!= error.msg
