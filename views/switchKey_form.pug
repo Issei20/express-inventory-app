@@ -10,7 +10,7 @@ block content
       label(for='description') Description :
       input(type='text', placeholder='' name='description' value=(undefined===switchKey ? '' : switchKey.description))
       label(for='price') Price :
-      input(type='number', placeholder='0' name='price' value=(undefined===switchKey ? '' : switchKey.price))
+      input(type='number', placeholder='0' step=".01" name='price' value=(undefined===switchKey ? '' : switchKey.price))
       label(for='number-in-stock') Number in stock :
       input(type='number', placeholder='0' name='number_in_stock' value=(undefined===switchKey ? '' : switchKey.number_in_stock))
       label(for='type') Type :

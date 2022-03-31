@@ -9,7 +9,7 @@ block content
       label(for='description') Description :
       input.form-control(type='text', placeholder='' name='description' class="descrInput" value=(undefined===mecakeyboard ? '' : mecakeyboard.description))
       label(for='price') Price :
-      input.form-control(type='number', placeholder='0' name='price' value=(undefined===mecakeyboard ? '' : mecakeyboard.price))
+      input.form-control(type='number',step=".01" placeholder='0' name='price' value=(undefined===mecakeyboard ? '' : mecakeyboard.price))
       label(for='number_in_stock') Number in stock :
       input.form-control(type='number', placeholder='0' name='number_in_stock' value=(undefined===mecakeyboard ? '' : mecakeyboard.number_in_stock))
       label(for='brand') Brand :
